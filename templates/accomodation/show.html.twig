@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>{{ accomodation.transactionType }}</h2>
+    <h3>{{ accomodation.type }} {{ accomodation.nbRooms }} rooms {{ accomodation.area }}</h3>
+{% endblock %}
+
+{% block title %}
+ {{ parent() }} | Details
+{% endblock %}
+
