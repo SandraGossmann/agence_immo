@@ -13,6 +13,10 @@ body {
     align-items: center;
 }
 
+.flex_div>p {
+    margin-left: 1rem;
+}
+
 .flex_between{
     justify-content: space-between;
 }
@@ -72,7 +76,10 @@ nav li {
     margin-right: 1rem; /*pourcentage de taille en fonction du zoom 1 rem = 10px pour zoom = 100%*/
 }
 
-
+header, footer {
+    display: flex;
+    justify-content: center;
+}
 
 
 /********************** Module  5  Doctrine   **************************/

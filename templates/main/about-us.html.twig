@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{%block title %}
+    {{ parent() }} | About Us
+{% endblock %}
+
+{%block body %}
+    <h2>About Us</h2>
+    <div class="flex_div">
+        <img src="{{ asset('assets/logo2.webp') }}" alt="logo">
+        <p>J'ai décidé que développer c’est bien sympa mais que ça ne me rendra jamais riche (enfin sauf
+            certains, parfois, de temps en temps) . Je prends alors une grande décision et je décide de
+            monter une agence immobilière afin de détrôner Stéphane Plazza et prendre sa place d’animateur
+            télé. Je n’ai pas beaucoup de budget mais j'ai des idées, je décide donc de vendre
+            des maisons qui ne sont pas à moi, pour cela avant d’arrêter complètement de développer, je
+            décide de créer un site web pour mon agence, $Agence Immo$ afin d’y recenser les biens à vendre ou à louer !</p>
+    </div>
+{% endblock %}
