@@ -81,8 +81,8 @@ class SearchType extends AbstractType
             ])
             ->add('isGarage', CheckboxType::class, ["label" => "Garage"])
             ->add('isExterior', CheckboxType::class, ["label" => "Exterior"])
-            ->add('isPool', CheckboxType::class)
-        ;
+            ->add('isPool', CheckboxType::class, ["label" => "Pool"]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver): void

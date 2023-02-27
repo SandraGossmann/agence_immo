@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Accomodation;
+use App\Entity\Search;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -39,28 +40,8 @@ class AccomodationRepository extends ServiceEntityRepository
         }
     }
 
-//    /**
-//     * @return Accomodation[] Returns an array of Accomodation objects
-//     */
-//    public function findByExampleField($value): array
-//    {
-//        return $this->createQueryBuilder('a')
-//            ->andWhere('a.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->orderBy('a.id', 'ASC')
-//            ->setMaxResults(10)
-//            ->getQuery()
-//            ->getResult()
-//        ;
-//    }
+    public function findBySearch(Search $search){
+        $qb = $this->createQueryBuilder('a');
 
-//    public function findOneBySomeField($value): ?Accomodation
-//    {
-//        return $this->createQueryBuilder('a')
-//            ->andWhere('a.exampleField = :val')
-//            ->setParameter('val', $value)
-//            ->getQuery()
-//            ->getOneOrNullResult()
-//        ;
-//    }
+    }
 }

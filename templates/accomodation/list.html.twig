@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Home Page</h2>
+    {{ form_start(searchForm) }}
+    {{ form_widget(searchForm) }}
+    <button>Search</button>
+    {{ form_end(searchForm) }}
+
+
+    <section class="series-list">
+        {% for acc in accomodations %}
+            <article>
+                <a href="{{ path('accomodation_show', {'id': acc.id}) }}">
+                    <h4>{{ acc.type }}</h4>
+                    <h2>{{ acc.area }} m2</h2>
+                </a>
+            </article>
+        {% endfor %}
+    </section>
+{% endblock %}
+
+{% block title %}
+    {{ parent() }} | Home
+{% endblock %}
+
