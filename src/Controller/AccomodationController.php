@@ -24,12 +24,13 @@ class AccomodationController extends AbstractController
 
         if (!$searchForm->isSubmitted()){
             $accomodations = $accomodationRepository->findBy([], ['releaseDate' => 'DESC']);
-            return $this->render('accomodation/list.html.twig', [
-                'searchForm' => $searchForm->createView(),
-                'accomodations' => $accomodations,
-            ]);
+
         }
 
+        return $this->render('accomodation/list.html.twig', [
+            'searchForm' => $searchForm->createView(),
+            'accomodations' => $accomodations,
+        ]);
 
 
     }

@@ -21,7 +21,7 @@ class AppFixtures extends Fixture
         for ($i = 0; $i < 200; $i++){
             $acc = new Accomodation();
             $acc
-                ->setArea($generator->numberBetween(14, 1000))
+                ->setArea($generator->numberBetween(14, 250))
                 ->setNbRooms($generator->numberBetween(1, 16))
                 ->setType($generator->randomElement(['apartment', 'house', 'yurt']))
                 ->setIsPool($generator->boolean(20))
