@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Search2;
+use App\Form\Search2Type;
 use App\Repository\AccomodationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,8 +20,8 @@ class AccomodationController extends AbstractController
     #[Route('/list', name: 'list')]
     public function list(AccomodationRepository $accomodationRepository, Request $request): Response
     {
-        $search = new Search();
-        $searchForm = $this->createForm(SearchType::class, $search);
+        $search = new Search2();
+        $searchForm = $this->createForm(Search2Type::class, $search);
         $searchForm->handleRequest($request);
 
         if (!$searchForm->isSubmitted()){
